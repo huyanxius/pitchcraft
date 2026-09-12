@@ -1,0 +1,4 @@
+interface:
+  display_name: "Pitchcraft｜路演构造术"
+  short_description: "从产品证据生成 RW 图片初稿，再转可编辑路演 PPT，配讲稿与答辩材料"
+  default_prompt: "使用 $pitchcraft，基于这些产品材料生成 RW 图片初稿，再转为保留版式的可编辑 PPT，并按路演需要配讲稿和时间表。"
