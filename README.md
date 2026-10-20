@@ -1,6 +1,6 @@
 <p align="center"><img src="docs/assets/pitchcraft-logo.svg" width="390" alt="Pitchcraft"></p>
 <p align="center">路演构造术 · 高质量图片 PPT，按需转为精致可编辑 PPT。</p>
-<p align="center"><a href="README.en.md">English</a> · <a href="#安装">安装</a> · <a href="docs/USAGE.md">使用指南</a> · <a href="docs/EXAMPLES.md">作品示例</a></p>
+<p align="center"><a href="README.en.md">English</a> · <a href="#安装">安装</a> · <a href="docs/TRY_IT.md">两页试用</a> · <a href="docs/USAGE.md">使用指南</a> · <a href="docs/EXAMPLES.md">作品示例</a></p>
 
 Pitchcraft 把内容判断、产品风格和 PPT 制作接成一个工作流。先用完整页面生成获得精致的图片 PPT，可以直接演示和交付；需要修改文字或移动素材时，再转换为可编辑 PPT。两个阶段独立可用，按需选择交付终点。
 
@@ -47,7 +47,21 @@ Pitchcraft 把内容判断、产品风格和 PPT 制作接成一个工作流。�
 - `rw-consulting-ppt`：图片 PPT 制作方法。
 - `image-ppt-to-editable`：可编辑转换与已有 PPT 修复。
 
-以支持本地 skills 的 Codex 环境为例：
+### 快速安装
+
+有 Node.js 22.20+ 时，在要做 PPT 的项目目录运行：
+
+```bash
+npx skills add huyanxius/pitchcraft --skill pitchcraft rw-consulting-ppt image-ppt-to-editable --agent codex --copy
+```
+
+这会通过 [skills CLI](https://github.com/vercel-labs/skills) 安装三个技能到当前项目。确认前检查安装位置与同名技能；需要所有项目可用时再加 `--global`。安装器不包含图像生成模型或 PPT 编辑工具。也可以先用 `npx skills add huyanxius/pitchcraft --list` 只查看技能。
+
+安装后从[两页公开资料试用](docs/TRY_IT.md)开始，先检查宿主能力，再生成样页。
+
+### 手动安装
+
+无需 Node.js。以支持本地 skills 的 Codex 环境为例：
 
 ```bash
 git clone https://github.com/huyanxius/pitchcraft.git
