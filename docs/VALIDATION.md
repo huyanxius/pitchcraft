@@ -1,5 +1,22 @@
 # 验证记录
 
+## 2026-10-20：公开试用入口
+
+在独立空目录中，用 Node.js 22.22.2 与 `skills` CLI 1.7.4 检查：
+
+| 检查 | 实际结果 |
+| --- | --- |
+| `npx skills add huyanxius/pitchcraft --list` | 识别出三个配套技能 |
+| `npx skills add huyanxius/pitchcraft --skill pitchcraft rw-consulting-ppt image-ppt-to-editable --agent codex --copy --yes` | 三个技能均安装到测试项目的 `.agents/skills/`，未修改全局技能 |
+| 安装后的文件清单与大小 | 三个技能与仓库对应目录一致 |
+| 两份 README 与 `docs/TRY_IT.md` 的本地链接 | 目标文件均存在；`git diff --check` 通过 |
+
+测试关闭了安装器的遥测。安装结果证明技能可被发现、复制与读取，不代表宿主已具备生图、PPTX 转换或中文渲染能力。
+
+新增的[两页试用题](TRY_IT.md)只用本仓库公开事实，供用户检查自己的宿主。此次未执行该题的模型生成与可编辑转换，未增加全流程验证结论。
+
+## 首次公开包检查
+
 2026-09-12 首次公开包检查：
 
 | 检查 | 实际结果 |
