@@ -1,6 +1,6 @@
 <p align="center"><img src="docs/assets/pitchcraft-logo.svg" width="390" alt="Pitchcraft"></p>
 <p align="center">Beautiful image decks. Refined editable slides when you need them.</p>
-<p align="center"><a href="README.md">简体中文</a> · <a href="docs/USAGE.md">Usage guide</a> · <a href="docs/EXAMPLES.md">Gallery</a></p>
+<p align="center"><a href="README.md">简体中文</a> · <a href="docs/TRY_IT.md#english">Two-slide trial</a> · <a href="docs/USAGE.md">Usage guide (Chinese)</a> · <a href="docs/EXAMPLES.md">Gallery</a></p>
 
 Pitchcraft turns product evidence and visual identity into presentation slides through two distinct stages. First, generate complete, carefully composed slide images and package them as a presentation-ready PPTX. Stop there, or convert the accepted design into visible editable text, appropriate native shapes, and independent image assets.
 
@@ -37,6 +37,20 @@ The workflow targets the details expected in commercial presentation delivery: a
 This skill workflow connects the complete production process through one assistant invocation. It combines `pitchcraft`, `rw-consulting-ppt`, and `image-ppt-to-editable`. The repository bundles all three skills, with upstream notices preserved.
 
 ## Install
+
+With Node.js 22.20+, run this in the project where you want to make slides:
+
+```bash
+npx skills add huyanxius/pitchcraft --skill pitchcraft rw-consulting-ppt image-ppt-to-editable --agent codex --copy
+```
+
+The [skills CLI](https://github.com/vercel-labs/skills) installs all three skills into the current project. Review the target paths and any existing skills before confirming. Add `--global` only if you want installation across projects. The installer does not supply image-generation models or PPT editing tools. To inspect the bundle without installing, use `npx skills add huyanxius/pitchcraft --list`.
+
+Start with the [two-slide public-only trial](docs/TRY_IT.md#english) to check host capabilities and try a small sample.
+
+### Manual installation
+
+Node.js is not required for this route:
 
 ```bash
 git clone https://github.com/huyanxius/pitchcraft.git
